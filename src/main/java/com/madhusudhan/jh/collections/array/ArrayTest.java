@@ -58,7 +58,7 @@ public class ArrayTest {
     public static void main(String[] args) {
         ArrayTest test = new ArrayTest();
         test.init();
-        test.persistArrays();
+        //test.persistArrays();
         test.retrieveArrays();
     }
 }
