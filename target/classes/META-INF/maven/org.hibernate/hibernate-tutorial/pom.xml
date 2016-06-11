@@ -15,6 +15,8 @@
 		
 		<hibernate.version>5.1.0.Final</hibernate.version>
 		<mysql.connector.version>5.1.37</mysql.connector.version>
+		
+		<spring.version>4.2.6.RELEASE</spring.version>
 	</properties>
 	<build>
 		<plugins>
@@ -32,8 +34,39 @@
 			</plugin>
 		</plugins>
 	</build>
-	
 	<dependencies>
+		<!-- Testing -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-all</artifactId>
+			<version>1.3</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+		    <groupId>org.mockito</groupId>
+		    <artifactId>mockito-all</artifactId>
+		    <version>1.10.19</version>
+		    <scope>test</scope>
+		</dependency>
+
+		<!-- Spring -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
 		
 		<!-- http://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
 		<dependency>
@@ -74,6 +107,49 @@
 		    <version>3.4</version>
 		</dependency>
 		
+		<dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-validator</artifactId>
+		    <version>5.2.4.Final</version>
+		</dependency>
+		
+		<dependency>
+		   <groupId>javax.el</groupId>
+		   <artifactId>javax.el-api</artifactId>
+		   <version>2.2.4</version>
+		</dependency>
+		
+		<!-- Java 8 only -->
+		<!-- <dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-infinispan</artifactId>
+		    <version>5.2.0.Final</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-core</artifactId>
+		    <version>5.2.0.Final</version>
+		</dependency> -->
+		
+		
+		<!-- java 7 -->
+		<!-- <dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-infinispan</artifactId>
+		    <version>5.0.9.Final</version>
+		</dependency> -->
+
+		<dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-ehcache</artifactId>
+		    <version>5.1.0.Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>19.0</version>
+		</dependency>
 	</dependencies>
 
 </project>
